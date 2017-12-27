@@ -8,6 +8,8 @@ RUN echo 'APT::Install-Suggests "0";' >> /etc/apt/apt.conf \
 
 RUN busybox --install
 
+RUN curl -o /sbin/wait-for-it https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for-it.sh && chmod +x /sbin/wait-for-it
+
 RUN apt-get -y autoremove && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # End of file
