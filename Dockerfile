@@ -1,4 +1,4 @@
-FROM debian:stretch
+FROM debian:jessie
 MAINTAINER Marco A Rojas <marco.rojas@zentek.com.mx>
 
 RUN echo 'APT::Install-Suggests "0";' >> /etc/apt/apt.conf \
